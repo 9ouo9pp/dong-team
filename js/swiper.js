@@ -1,7 +1,7 @@
 const progressFill = document.querySelector(".progress-fill");
 const planeIcon = document.querySelector(".plane-icon");
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mainSwiper", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
