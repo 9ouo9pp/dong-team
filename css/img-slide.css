@@ -16,6 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .swiper-slide img {
@@ -41,6 +42,9 @@
   /* background-color: red; */
 }
 .swiper-content-subtitle {
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+
   color: #fff;
   font-family: Pretendard;
   font-size: 24px;
@@ -50,6 +54,9 @@
   letter-spacing: -1.2px;
 }
 .swiper-content-maintitle {
+  transform: translateX(-100%);
+  transition: all 0.4s ease-in-out;
+
   color: #fff;
   /* leading-trim: both; */
   /* text-edge: cap; */
@@ -63,9 +70,16 @@
 .je .swiper-content-maintitle {
   padding-bottom: 90px;
 }
-.ul .swiper-content-maintitle {
+/* 이미지슬라이드 텍스트 나온는 액션 */
+.swiper-slide-active .swiper-content-maintitle,
+.swiper-slide-active .swiper-content-subtitle,
+.swiper-slide-active .swiper-content-title-desc-txt {
+  transform: translateX(0%);
+}
+.ul.swiper-slide-active .swiper-content-maintitle {
   transform: translateX(-24px);
 }
+
 .swiper-content-title-desc {
   position: relative;
   width: 1000px;
@@ -75,6 +89,9 @@
   /* background-color: aqua; */
 }
 .swiper-content-title-desc-txt {
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+
   position: relative;
   display: flex;
   align-items: flex-end;
